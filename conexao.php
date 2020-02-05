@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 
 
-//para testar a conexão. try e catch tem a mesma estrutura de if e catch. Como o PDO é mySQL, se der erro, não aparece autómatico, pois não é um erro PHP
+//para testar a conexão. try e catch tem a mesma estrutura de if e else. Como o PDO é mySQL, se der erro, não aparece autómatico, pois não é um erro PHP
 try {
     $conexaoDB = new PDO($dsn, $username, $password);
    // echo "<h1>DEU CERTO!</h1>";
