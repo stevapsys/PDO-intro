@@ -50,6 +50,7 @@ $livros = $consultaDB ->fetchAll(PDO::FETCH_ASSOC);
                 <th>Preço</th>
                 <th>Categoria</th>
                 <th>Editora</th>
+                <th>Ações</th>
             </tr>
         </thead>
             <tbody>
@@ -60,6 +61,10 @@ $livros = $consultaDB ->fetchAll(PDO::FETCH_ASSOC);
                     <td> <?php echo $livro['preco'] ?></td>
                     <td> <?php echo $livro['fk_categoria'] ?></td>
                     <td> <?php echo $livro['fk_editora'] ?></td>
+                    <td>
+                        <a href="editarLivro.php?id=<?php echo $livro['id_produto'] ?>">editar</a>
+                        <a href="excluirLivro.php?id=<?php echo $livro['id_produto'] ?>">excluir</a>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
